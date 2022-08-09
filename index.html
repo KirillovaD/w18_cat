@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Опросник котоведа</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>Владелец </legend>
+      <div>
+        <label for="owner">Имя владельца</label>
+        <input type="text" name="owner" id="owner" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+      </div>
+      <div>
+        <label for="tel">Номер телефона</label>
+        <input type="tel" id="tel" placeholder="8-123-456-78-90" pattern="[7-8]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          minlength="10" maxlength="20" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Питомец</legend>
+      <div>
+        <label for="catName">Кличка питомца</label>
+        <input type="text" name="catName" id="catName" required />
+      </div>
+      <div>
+        <label for="breed">Порода</label>
+        <select name="breed" id="breed" required>
+          <option value="1">Абиссинская кошка</option>
+          <option value="2">Британская короткошерстная</option>
+          <option value="3">Бенгальская кошка</option>
+          <option value="4">Египетская Мау</option>
+          <option value="5">Мейн-Кун</option>
+          <option value="6">Манчкин</option>
+          <option value="7">Невская маскарадная кошка</option>
+          <option value="8">Персидская</option>
+          <option value="9">Русская голубая кошка</option>
+        </select>
+      </div>
+      <div>
+        <label for="sex"> Пол питомца</label>
+        <span>Самец</span><input type="radio" name="sex" id="sex" value="m" required />
+        <span>Самка</span><input type="radio" name="sex" id="sex" value="f" required />
+      </div>
+      <div>
+        <label for="foto">Фотография питомца</label>
+        <input type="file" name="foto" id="foto" />
+      </div>
+
+    </fieldset>
+    <fieldset>
+      <legend>Чем питается?</legend>
+      <div>
+        <label for="wetfeed">Влажный корм</label>
+        <input type="checkbox" name="wetfeed" id="wetfeed" checked />
+      </div>
+      <div>
+        <label for="dryfeed">Сухой корм</label>
+        <input type="checkbox" name="dryfeed" id="dryfeed" />
+
+      </div>
+      <div>
+        <label for="naturefeed">Натуральный корм</label>
+        <input type="checkbox" name="naturefeed" id="naturefeed" />
+      </div>
+      <div>
+        <label for="comments">Комментарий</label>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      </div>
+    </fieldset>
+
+
+    <button>Отправить</button>
+
+
+
+
+  </form>
+
+</body>
+
+</html>
