@@ -37,21 +37,21 @@
       <div>
         <label for="breed">Порода</label>
         <select name="breed" id="breed" required>
-          <option value="1">Абиссинская кошка</option>
-          <option value="2">Британская короткошерстная</option>
-          <option value="3">Бенгальская кошка</option>
-          <option value="4">Египетская Мау</option>
-          <option value="5">Мейн-Кун</option>
-          <option value="6">Манчкин</option>
-          <option value="7">Невская маскарадная кошка</option>
-          <option value="8">Персидская</option>
-          <option value="9">Русская голубая кошка</option>
+          <option value="Абиссинская кошка">Абиссинская кошка</option>
+          <option value="Британская короткошерстная">Британская короткошерстная</option>
+          <option value="Бенгальская кошка">Бенгальская кошка</option>
+          <option value="Египетская Мау">Египетская Мау</option>
+          <option value="Мейн-Кун">Мейн-Кун</option>
+          <option value="Манчкин">Манчкин</option>
+          <option value="Невская маскарадная кошка">Невская маскарадная кошка</option>
+          <option value="Персидская">Персидская</option>
+          <option value="Русская голубая кошка">Русская голубая кошка</option>
         </select>
       </div>
       <div>
         <label for="sex"> Пол питомца</label>
-        <span>Самец</span><input type="radio" name="sex" id="sex" value="m" required />
-        <span>Самка</span><input type="radio" name="sex" id="sex" value="f" required />
+        <span>Самец</span><input type="radio" name="sex" id="sex" value="male" required />
+        <span>Самка</span><input type="radio" name="sex" id="sex" value="female" required />
       </div>
       <div>
         <label for="foto">Фотография питомца</label>
@@ -63,16 +63,16 @@
       <legend>Чем питается?</legend>
       <div>
         <label for="wetfeed">Влажный корм</label>
-        <input type="checkbox" name="wetfeed" id="wetfeed" checked />
+        <input type="checkbox" name="feed" value="wetfeed" id="wetfeed" checked />
       </div>
       <div>
         <label for="dryfeed">Сухой корм</label>
-        <input type="checkbox" name="dryfeed" id="dryfeed" />
+        <input type="checkbox" name="feed" value="dryfeed" id="dryfeed" />
 
       </div>
       <div>
         <label for="naturefeed">Натуральный корм</label>
-        <input type="checkbox" name="naturefeed" id="naturefeed" />
+        <input type="checkbox" name="feed" value="naturefeed" id="naturefeed" />
       </div>
       <div>
         <label for="comments">Комментарий</label>

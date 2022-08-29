@@ -1,28 +1,33 @@
-let form = document.querySelector('form');
-form.addEventListener('submit',function (event){
-  event.preventDefault();
-})
+const form = document.querySelector('form');
 
 class Cat{
-  constructor(name, breed, sex){
-    this.name = name;
-    this.breed = breed;
-    this.sex = sex;
+  constructor(data){ //отдаем работу с data формы самому классу
+    this.catName = data.get('catName'); // через метод гет у объекта data модем запросить данные из нужного нам поля
+    this.breed = data.get('breed'); //let breedName = breed.options[breed.selectedIndex].text;
+    this.sex = data.get('sex');
+    this.food = data.get('feed');
+    
+  }
+
+  print() {
+
+    console.log(this); //выводим в консоль сам объект this
+
   }
 }
 
-const button = document.querySelector('#createCat');
 
-let catName = document.getElementById('catName');
-let breed = document.getElementById('breed');
-let breedName = breed.options[breed.selectedIndex].text;
-let sex = document.querySelector('input[name="sex"]');
+form.addEventListener('submit',function (event){
+  event.preventDefault();
+  let data = new FormData(form); // доступ к полям форму
 
-button.addEventListener('click', createCat())
 
-function createCat(){
-  let cat = {}
-  cat = new Cat(catName.value, breedName, sex.value)
-  console.log(cat)
-}
-  
+  const button = document.querySelector('#createCat');
+  button.addEventListener('click', (createCat)=>{
+    let cat = new Cat(data);
+    cat.print();
+  });
+
+  //декструктуризация объекта
+  //let cat = new Cat({catName, breed, sex, food});//передача аргументов в виде объектов, когда их много!!!
+})
