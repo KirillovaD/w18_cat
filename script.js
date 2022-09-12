@@ -20,14 +20,25 @@ class Cat{
 form.addEventListener('submit',function (event){
   event.preventDefault();
   let data = new FormData(form); // доступ к полям форму
-
-
+  fetch("https://httpbin.org/post",
+    {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+      }
+    })
+    .then(respose => respose.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+   
   const button = document.querySelector('#createCat');
   button.addEventListener('click', (createCat)=>{
     let cat = new Cat(data);
-    cat.print();
+    cat.print();})
+
+    
   });
 
   //декструктуризация объекта
   //let cat = new Cat({catName, breed, sex, food});//передача аргументов в виде объектов, когда их много!!!
-})
